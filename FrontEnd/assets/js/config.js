@@ -1,4 +1,4 @@
-const baseURL = 'https://bluel.onrender.com';
+const baseURL = 'http://localhost:5678';
 
 export { baseURL };
 
