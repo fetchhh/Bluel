@@ -1,0 +1,614 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** End reset CSS **/
+
+body {
+	max-width: 1140px;
+	margin: auto;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	background-color: #FFFEF8;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+
+section {
+	margin: 100px 0
+}
+
+/* Remove link decoration */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Remove input focus outline */
+
+input:focus {
+	outline: none;
+}
+
+h1 {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1>span {
+	font-family: 'Work Sans';
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	;
+}
+
+h2 {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+nav li img {
+	width: 20px;
+	height: 20px;
+}
+
+li:hover {
+	color: #B1663C;
+}
+
+#introduction {
+	display: flex;
+	align-items: center;
+}
+
+#introduction figure {
+	flex: 1
+}
+
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+/* Gallery */
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+	height: 430px;
+	object-fit: cover;
+}
+
+/* Edit */
+
+.edit-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	gap: 10px;
+	height: 50px;
+	background-color: #000000;
+	color: white;
+}
+
+#portfolio h2 {
+	text-align: center;
+}
+
+.project-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3em;
+	gap: 30px;
+}
+
+.project-wrapper .edit {
+	display: flex;
+	gap: 10px;
+}
+
+.project-wrapper .edit p {
+	padding-top: 1px;
+}
+
+.project-wrapper .edit:hover {
+	cursor: pointer;
+}
+
+/* Modal */
+
+.modal {
+	z-index: 999;
+	display: none;
+	left: 50%;
+	top: 11%;
+	position: fixed;
+	transform: translate(-50%);
+	background-color: #FFFFFF;
+	width: 630px;
+	height: 690px;
+	border-radius: 10px;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.modal .modal-wrapper {
+	height: 100%;
+	width: 75%;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.modal-wrapper .fa-xmark,
+.modal-wrapper .fa-arrow-left {
+	font-size: 22px;
+	position: absolute;
+	top: 3%;
+}
+
+.modal-wrapper .fa-xmark {
+	right: 5%;
+}
+
+.modal-wrapper .fa-arrow-left {
+	left: 5%;
+}
+
+.fa-xmark:hover,
+.fa-arrow-left:hover {
+	cursor: pointer;
+}
+
+.modal-wrapper h2 {
+	font-family: 'Work Sans';
+	font-weight: normal;
+	color: #000000;
+	margin-top: 20px;
+}
+
+.modal-wrapper .modal-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	overflow: hidden auto;
+/*	margin-top: 20px;*/
+	padding: 10px;
+}
+
+/* Modal edit */
+
+.modal-main .modal-edit {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	line-height: 50px;
+	gap: 10px;
+}
+
+.modal-edit img {
+	object-fit: cover;
+	height: 120px;
+	width: 85px;
+}
+
+.modal-edit figure {
+	position: relative;
+}
+
+.modal-edit figure .fa-trash-can {
+	font-size: 13px;
+	position: absolute;
+	right: 8%;
+	top: 5%;
+	color: #FFF;
+	padding: 6px;
+	background-color: #000000;
+	border-radius: 5px;
+}
+
+.modal-edit figure .fa-trash-can:hover {
+	cursor: pointer;
+}
+
+.modal-wrapper .modal-submit {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	padding-top: 20px;
+	border-top: 1px solid #B3B3B3;
+}
+
+.modal-submit .handler {
+	display: none;
+	height: 10px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+/* Login handler */
+
+#login .handler {
+	height: 10px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+/* Modal form */
+
+.modal-form form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.modal-form form label {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+
+.modal-form form input[type="text"],
+.modal-form form select {
+	height: 51px;
+	border: none;
+	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+	padding-left: 10px;
+}
+
+.modal-form form input[type="file"] {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+.modal-form form .upload-form {
+	display: flex;
+	align-items: center;
+	height: 160px;
+	border-radius: 5px;
+	flex-direction: column;
+	background-color: #E8F1F6;
+	gap: 20px;
+	padding: 15px;
+	position: relative;
+}
+
+.modal-form form .upload-form span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 170px;
+	height: 36px;
+	background-color: #CBD6DC;
+	border-radius: 50px;
+	color: #306685;
+	font-weight: 600;
+	position: relative;
+}
+
+.modal-form form .upload-form input:hover {
+	cursor: pointer;
+}
+
+.modal-form form .upload-form p {
+	font-size: 11px;
+}
+
+.upload-form .preview {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 129px;
+   object-fit: cover;
+}
+
+
+/* Modal submit  */
+
+.modal-submit button {
+	border: none;
+	width: 240px;
+	height: 40px;
+}
+
+.modal-submit button:hover {
+	cursor: pointer;
+}
+
+.modal-submit input[type="submit"],
+.modal-submit button {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 1em auto;
+	text-align: center;
+	border-radius: 60px;
+}
+
+.modal-submit input[type="submit"] {
+	width: 180px;
+}
+
+/* Filters */
+
+#portfolio .sort-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 50px;
+}
+
+.sort-wrapper button {
+	height: 37px;
+	padding: 5px 10px;
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-weight: bold;
+	color: #1D6154;
+	background-color: #FFFEF8;
+}
+
+.sort-wrapper button:hover {
+	cursor: pointer;
+}
+
+.sort-wrapper button:focus {
+	outline: none;
+	background-color: #1D6154;
+	color: #FFFEF8;
+}
+
+/* Backdrop filter */
+
+.backdrop-filter {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 998;
+}
+
+#contact {
+	width: 35%;
+	margin: auto;
+}
+
+#contact>* {
+	text-align: center;
+
+}
+
+#contact h2 {
+	margin-bottom: 20px;
+}
+
+#contact form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 37px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#contact label {
+	margin: 2em 0 1em 0;
+}
+
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"] {
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin: 2em auto;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
