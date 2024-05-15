@@ -124,10 +124,10 @@ const addWork = () => {
 
 
 /** Sort items by category name
- * @param {string} type - category name
+ * @param {string} name - category name
  */
-const sortByCategory = (type) => {
-    return works.filter(item => item?.category?.name === type);
+const sortByCategory = (name) => {
+    return works.filter(item => item?.category?.name === name);
 }
 
 /** Replace imageUrl with the baseUrl */
