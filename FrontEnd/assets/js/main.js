@@ -64,7 +64,7 @@ const deleteWork = (id) => {
                 throw new Error('Failed to delete work');
             }
             // Update content
-            works = works.filter(work => work.id != id)
+            works = works.filter(work => work.id != id);
             displayGallery(works);
             displayEditModal();
         })
@@ -103,7 +103,7 @@ const addWork = () => {
         .then(data => {
             // Update content
             showMessage('Ajouté avec succès!');
-            pushWork(data, selectedOption)
+            pushWork(data, selectedOption);
             displayGallery(works);
 
         })
